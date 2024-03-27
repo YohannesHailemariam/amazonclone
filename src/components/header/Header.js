@@ -6,12 +6,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {logo} from "../../assets/index"
 import { useState } from 'react';
 import { allItems } from '../../constants';
+import HeaderBottom from '../HeadeBottom';
 
 function Header() {
     const [showAll, setShowAll] = useState(false)  
     
   return (
-    <div>
+    <div className='w-full'>
         <div className='w-full bg-amazon_blue text-white px-4 py-3 flex items-center gap-4'>
             {/* Image Start here */}
             <div className='headerHover'>
@@ -80,6 +81,7 @@ function Header() {
                 </div>
         {/* Cart End here */}
         </div>
+        <HeaderBottom />
     </div>
   )
 }

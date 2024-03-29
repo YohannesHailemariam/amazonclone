@@ -20,13 +20,13 @@ function Header() {
             </div>
         {/* Image End here */}
         {/* Deliver Start here */}
-        <div className='headerHover'> 
+        <div className='headerHover hidden mdl:inline-flex'> 
             <LocationOnIcon />
             <p className='text-sm text-lightText font-light flex flex-col'>Deliver to{" "} <span className='text-sm font-semibold -mt-1 text-whiteText'>JohnHm.</span></p>
         </div>
         {/* Deliver end here */}
         {/* Search Start here */}
-            <div className='h-10 rounded-md flex flex-grow relative'>
+            <div className='h-10 rounded-md hidden lgl:flex flex-grow relative'>
                 <span onClick={()=>setShowAll(!showAll)} className='w-14 h-full bg-gray-200 hover:bg-gray-300 border-2 cursor-pointer
                 duration-300 text-sm text-amazon_blue font-titleFont flex items-center 
                 justify-center rounded-tl-md rounded-bl-md'>
@@ -58,11 +58,11 @@ function Header() {
             </div>
         {/* Search End here */}
         {/* Signin Start here */}
-                <div className='flex flex-col items-start justify-center headerHover'>
-                    <p className='text-xs text-lightText font-light'>Hello, sign in</p>
-                    <p className='text-sm font-semibold -mt-1 text-whiteText'>
+                <div className='hidden lgl:flex flex-col items-start justify-center headerHover'>
+                    <p className='text-sm mdl:text-xs text-white mdl:text-lightText font-light'>Hello, sign in</p>
+                    <p className='text-sm font-semibold -mt-1 text-whiteText hidden mdl:inline-flex'>
                         Account & Lists{" "}
-                        <span><ArrowDropDownIcon/></span></p>
+                        <span><ArrowDropDownIcon /></span></p>
                 </div>
         {/* Signin End here */}
         {/* Orders Start here */}

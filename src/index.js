@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import { PersistGate } from 'redux-persist/integration/react';
 import "slick-carousel/slick/slick-theme.css"; 
 import { Provider } from 'react-redux';
+import firebaseConfig from './firebase.config';
 import { store,persistor } from './redux/store';
 import './index.css';
 import App from './App';

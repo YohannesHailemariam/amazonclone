@@ -12,7 +12,8 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     const [showAll, setShowAll] = useState(false)  
-    const products = useSelector((state)=>state.amazon.products);
+    const products = useSelector((state) => state.amazonReducer.products);
+    const userInfo = useSelector((state) => state.amazonReducer.userInfo);
 
   return (
     <div className='w-full sticky top-0 z-50'>
@@ -65,8 +66,13 @@ function Header() {
         {/* Search End here */}
         {/* Signin Start here */}
           <Link to="/signin">
-                <div className='hidden lgl:flex flex-col items-start justify-center headerHover'>
-                    <p className='text-sm mdl:text-xs text-white mdl:text-lightText font-light'>Hello, sign in</p>
+                <div className='flex flex-col items-start justify-center headerHover'>
+                    {
+                        userInfo?<p className='text-sm text-gray-100 font-medium'>Hello, sign in</p>:(
+                            <p className='text-sm mdl:text-xs text-white mdl:text-lightText font-light'>{userInfo.userName}</p>
+                        )
+                    }
+                    
                     <p className='text-sm font-semibold -mt-1 text-whiteText hidden mdl:inline-flex'>
                         Account & Lists{" "}
                         <span><ArrowDropDownIcon /></span></p>
